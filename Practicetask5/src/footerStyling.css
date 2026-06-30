@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #9887ed;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+div h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+    color: #4f46e5; 
+}
