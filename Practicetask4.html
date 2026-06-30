@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            row-gap: 20px;
+            column-gap: 20px;
+        }
+        div{
+            border: 1px solid black;
+            padding: 10px;
+            background-color: burlywood;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+        let body = document.querySelector("body")
+        window.fetch('https://dummyjson.com/users').then((response) => response.json()
+        ).then((data) => {
+            let AllUsers = data.users;
+            console.log(AllUsers);
+            AllUsers.forEach((user) => {
+
+                let card = document.createElement('div');
+                let image = document.createElement('img');
+                let cardTitle = document.createElement('h4');
+                let cardText = document.createElement("h3")
+                let cardText1= document.createElement("p")
+                let cardText2 = document.createElement("p")
+                let cardText3 = document.createElement("p")
+                let cardText4 = document.createElement("p")
+                let cardText5 = document.createElement("p")
+                let cardText6 = document.createElement("p")
+                let cardText7 = document.createElement("p")
+                let cardText8 = document.createElement("p")
+                let cardText9 = document.createElement("p")
+                
+                image.src = user.image
+                cardTitle.innerText=`Name :${user.firstName} ${user.lastName}`
+                cardText.innerText=`ID :${user.id}`
+                cardText1.innerText=`Email :${user.email}`
+                cardText2.innerText=`Phone :${user.phone}`
+                cardText3.innerText=`Age :${user.age}`
+                cardText4.innerText=`Gender :${user.gender}`
+                cardText5.innerText=`Address :${user.address.address}, ${user.address.city}, ${user.address.state}, ${user.address.postalCode}`
+                cardText6.innerText=`Company :${user.company.address.address}, ${user.company.address.city}, ${user.company.address.coordinates.lat}, ${user.company.address.coordinates.lng}, ${user.company.address.country}, ${user.company.address.postalCode}, ${user.company.address.state}, ${user.company.address.statecode}, ${user.company.name}, ${user.company.department}, ${user.company.title}`
+                cardText7.innerText=`University :${user.university}`
+                cardText8.innerText=`Birth Date :${user.birthDate}`
+                cardText9.innerText=`Weight :${user.weight}`
+
+                card.appendChild(image)
+                card.appendChild(cardText)
+                card.appendChild(cardTitle)
+                card.appendChild(cardText1)
+                card.appendChild(cardText2)
+                card.appendChild(cardText3)
+                card.appendChild(cardText9)
+                card.appendChild(cardText4)
+                card.appendChild(cardText8)
+                card.appendChild(cardText7)
+                card.appendChild(cardText2)
+                card.appendChild(cardText5)
+                card.appendChild(cardText6)
+                body.appendChild(card)
+            })
+
+
+        }
+        ).catch((err) => {
+            console.error(err);
+        })
+    </script>
+</body>
+
+</html>
