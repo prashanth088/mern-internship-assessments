@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register page</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: darkslateblue;
+    }
+    div{
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 2;
+    }   
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: rgb(11, 70, 110) !important;
+    }
+    div svg{
+        align-items: center;
+        height: 30px;
+        width: 30px;
+        color: white;
+        padding: 0;
+        display: flex;
+        
+    }
+    div h1{
+        color: white;
+        font-size: 24px ;
+        flex-grow: 1;
+        margin-left: 20px;
+        padding: 20px;
+    }
+    header ul{
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        align-items: center;
+    }
+    header ul li{
+        display: flex;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        
+        
+    }
+    header ul li a:hover{
+        background-color: rgb(23, 17, 99);
+        color: white;
+    }
+    header ul li:hover{
+        font-weight: bold;
+        font-style: italic;
+        font-size: 22px;
+        color: mediumvioletred;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    main{
+        color: white;
+    }
+    main h2{
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    section form{
+        flex-direction: column;
+        justify-content: center;
+        font-size: 24px;
+        text-align: center;
+        align-items: center;
+        margin-top: 100px;
+        /* margin-left: 2%; */
+    }
+    form input{
+        padding: 0;
+        margin: 0;
+        width: 200px;
+    }
+    #male,#female{
+        width: 20px;
+    }
+    #submit{
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+    }
+    #submit:hover{
+        background-color: rgb(23, 17, 99);
+        color: white;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <header>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+        <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+        </svg>  
+        <h1>ABC Training Institute</h1>
+            <ul>
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="Coursepage.html">Course</a></li>
+                <li><a href="Schedulepage.html">Schedule</a></li>
+                <li><a href="Registerpage.html">Register</a></li>
+            </ul>
+        </header>
+    </div>
+    <main>
+        <h2>Student Registration</h2>
+        <section>
+            <form action="submit_registration.php" method="post">
+                <label  for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+                <label for="Phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <br><br>
+                <label for="course">Course:</label>
+                <select id="course" name="course" required>
+                    <option value="HTML & CS">HTML & CS</option>
+                    <option value="web_development">Web Development</option>
+                    <option value="data_science">Data Science</option>
+                    <option value="cyber_security">Cyber Security</option>
+                </select>
+                <br><br>
+                <label for="Gender">Gender:</label>
+                <input type="radio" id="male" name="gender" value="male" required>Male 
+                <input type="radio" id="female" name="gender" value="female" required>Female
+                <br><br>
+                <label for="Msg">Message:</label>
+                <textarea id="msg" name="msg" rows="4" cols="50"></textarea>
+                <br><br>
+                <input type="submit" id="submit" value="Register">
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule page</title>
+<style>
+            *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgba(75, 38, 7, 0.962);
+        }
+        div{
+            position: sticky !important;
+            top: 0 !important;
+            z-index: 2;
+        }   
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: rgb(11, 70, 110) !important;
+        }
+        div svg{
+            align-items: center;
+            height: 30px;
+            width: 30px;
+            color: white;
+            padding: 0;
+            display: flex;
+            
+        }
+        div h1{
+            color: white;
+            font-size: 24px;
+            flex-grow: 1;
+            margin-left: 20px;
+            padding: 20px;
+        }
+        header ul{
+            display: flex;
+            justify-content: space-evenly;
+            list-style: none;
+            align-items: center;
+        }
+        header ul li{
+            display: flex;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            
+            
+        }
+        header ul li a:hover{
+            background-color: rgb(23, 17, 99);
+            color: white;
+        }
+        header ul li:hover{
+            font-weight: bold;
+            font-style: italic;
+            font-size: 22px;
+            color: mediumvioletred;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        main{
+            
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        main h2{
+            color: white;
+            font-size: 35px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        main{
+            margin-top: 100px;
+        }
+        table{
+            width: 90%;
+            height: 300px;
+            font-style: bold;
+            margin: 0 auto;
+            border-collapse: collapse;
+            text-align: center;
+            color: white;
+            background-color: white;
+        }
+        th, td{
+            color: black;
+            border: 1px double black;
+            padding: 10px;
+
+        }
+        th{
+            background-color:rgb(136, 26, 26);
+
+        }
+</style>
+</head>
+<body>
+    <div>
+        <header>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+        <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+        </svg>  
+        <h1>ABC Training Institute</h1>
+            <ul>
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="Coursepage.html">Course</a></li>
+                <li><a href="Schedulepage.html">Schedule</a></li>
+                <li><a href="Registerpage.html">Register</a></li>
+            </ul>
+        </header>
+    </div>
+    <main>
+        <h2>Course Schedule</h2>
+        <section>
+            <table>
+                <tr>
+                    <th>Course </th>
+                    <th>Trainer</th>
+                    <th>Duration</th>
+                    <th>Mode</th>
+                </tr>
+                <tr>
+                    <td>HTML & CSS</td>
+                    <td>Ashoka</td>
+                    <td>2 Weeks</td>
+                    <td>Online</td>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                    <td>Ms.Rahul</td>
+                    <td>4 Weeks</td>
+                    <td>Offline</td>
+                </tr>
+                <tr>
+                    <td>React JS</td>
+                    <td>Mr. Anita</td>
+                    <td>3 Weeks</td>
+                    <td>Online</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
